@@ -37,7 +37,7 @@ pub struct AppData {
 impl AppData {
     pub fn load() -> Self {
         if let Some(data_dir) = dirs::data_local_dir() {
-            let app_data_dir = data_dir.join("hadron");
+            let app_data_dir = data_dir.join("hadron-launcher");
             if !app_data_dir.exists() {
                 fs::create_dir_all(&app_data_dir).unwrap();
             }
