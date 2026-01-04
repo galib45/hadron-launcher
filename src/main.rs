@@ -13,7 +13,7 @@ fn main() -> iced::Result {
     let window_settings = iced::window::Settings {
         size: (760.0, 570.0).into(),
         platform_specific: PlatformSpecific {
-            application_id: "hadron".into(), ..Default::default()
+            application_id: "hadron-launcher".into(), ..Default::default()
         },
         ..Default::default()
     };

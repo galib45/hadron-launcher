@@ -1451,7 +1451,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "hadron"
+name = "hadron-launcher"
 version = "0.1.0"
 dependencies = [
  "dirs",

@@ -153,9 +153,9 @@ impl App {
 
     pub fn title(&self) -> String {
         match &self.current_page {
-            Page::Home(_) => "Hadron - Home",
-            Page::AddGame(_) => "Hadron - Add a new game",
-            Page::Settings(_) => "Hadron - Settings",
+            Page::Home(_) => "Home",
+            Page::AddGame(_) => "Add a new game",
+            Page::Settings(_) => "Settings",
         }.into()
     }
 }

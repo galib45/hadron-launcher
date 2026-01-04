@@ -1,11 +1,11 @@
-# Hadron Project (`GEMINI.md`)
+# Hadron Launcher Project (`GEMINI.md`)
 
 This document provides a comprehensive overview of the Hadron project for future development and maintenance.
 
 ## 1. Project Overview
 
 **Purpose:**
-Hadron is a graphical user interface (GUI) application for Linux, designed to act as a simple "Wrapper to Proton." It allows users to add, manage, and launch games (likely Windows games) using Valve's Proton compatibility layer.
+Hadron Launcher is a graphical user interface (GUI) application for Linux, designed to act as a simple "Wrapper to Proton." It allows users to add, manage, and launch games (likely Windows games) using Valve's Proton compatibility layer.
 
 **Technology:**
 - **Language:** Rust (2024 Edition)
@@ -17,7 +17,7 @@ The application follows The Elm Architecture (Model-View-Update), which is idiom
 - **`main.rs`**: The application entry point, responsible for setting up the main window and running the `iced` application.
 - **`app.rs`**: The core of the application. It defines the main `App` struct, the possible pages (`Page` enum), and all possible user interactions (`Message` enum). It manages the application's state, including page navigation and data persistence.
 - **`models.rs`**: Defines the primary data structures: `Game` (containing name, paths to the executable, cover art, and Wine prefix) and `Settings` (containing the path to Proton).
-- **`app/AppData`**: A struct that holds the list of games and settings. It includes methods to load this data from and save it to `~/.local/share/hadron/data.toml`.
+- **`app/AppData`**: A struct that holds the list of games and settings. It includes methods to load this data from and save it to `~/.local/share/hadron-launcher/data.toml`.
 - **`pages/`**: A module containing sub-modules for each screen of the application (e.g., `home.rs`, `add_game.rs`, `settings.rs`). Each page module has its own `State`, `Message` enum for page-specific actions, and `view` function to render its UI.
 - **`widgets/`**: Contains custom, reusable UI components that are used across different pages.
 
