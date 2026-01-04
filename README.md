@@ -1,6 +1,68 @@
-## Hadron
+# Hadron
 
-Wrapper to Proton!
+![Screenshot 1](ss1.png)
+![Screenshot 2](ss2.png)
 
-![](./ss1.png)
-![](./ss2.png)
+## Overview
+
+Hadron is a simple, open-source game launcher for Linux, designed to manage and launch games using Valve's Proton compatibility layer. It provides a clean graphical interface built with the `iced` framework to help users organize their game library, add new games, configure basic settings, and launch them with Proton.
+
+## Features
+
+- **Game Management**: Easily add, edit, and remove games from your library.
+- **Game Launching**: Launch games directly with configured Proton paths.
+- **Cover Art Support**: Display cover images for your games for a richer visual experience.
+- **Settings**: Configure global application settings, including the path to your Proton installation.
+- **Persistent Data**: Game library and settings are automatically saved and loaded.
+
+## Technologies Used
+
+-   **Rust**: The primary programming language.
+-   **Iced**: A cross-platform GUI library for Rust, utilizing The Elm Architecture (Model-View-Update).
+-   **TOML**: Used for serializing and deserializing application data (game list and settings).
+-   **`dirs` crate**: For cross-platform discovery of user-specific directories to store application data.
+-   **`rfd` (Rust File Dialogs)**: For native file/folder selection dialogues.
+
+## Getting Started
+
+To build and run Hadron, you will need to have Rust and Cargo installed on your system. If you don't have them, you can install them via `rustup`: [https://rustup.rs/](https://rustup.rs/)
+
+### Prerequisites
+
+*   Rust and Cargo (latest stable version recommended)
+
+### Building
+
+Navigate to the project's root directory and use Cargo to build the application:
+
+```bash
+cargo build --release
+```
+
+The `--release` flag will produce an optimized executable.
+
+### Running
+
+After building, you can run the application directly:
+
+```bash
+cargo run
+```
+
+Or, if you built with `--release`:
+
+```bash
+./target/release/hadron
+```
+
+## Configuration
+
+Hadron stores its game library and settings in a file named `data.toml`. This file is located in your system's local data directory, typically at:
+
+`~/.local/share/hadron/data.toml`
+
+You can manually inspect or edit this file, though it's recommended to use the application's interface for managing games and settings.
+
+## License
+
+This project is licensed under the terms available in the `LICENSE` file.
