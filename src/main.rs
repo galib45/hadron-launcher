@@ -9,11 +9,13 @@ mod widgets;
 mod resources;
 mod utils;
 
+pub const APP_ID: &str = "quarkpad";
+
 fn main() -> iced::Result {
     let window_settings = iced::window::Settings {
         size: (760.0, 570.0).into(),
         platform_specific: PlatformSpecific {
-            application_id: "hadron-launcher".into(), ..Default::default()
+            application_id: APP_ID.into(), ..Default::default()
         },
         ..Default::default()
     };

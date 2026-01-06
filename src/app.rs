@@ -2,7 +2,7 @@ use std::fs;
 
 use iced::{padding, widget};
 
-use crate::{models::{Game, Settings}, pages::{add_game, home, settings}, utils};
+use crate::{models::{Game, Settings}, pages::{add_game, home, settings}, utils, APP_ID};
 
 pub enum Page {
     Home(home::State),
@@ -37,12 +37,12 @@ pub struct AppData {
 impl AppData {
     pub fn load() -> Self {
         if let Some(data_dir) = dirs::data_local_dir() {
-            let app_data_dir = data_dir.join("hadron-launcher");
+            let app_data_dir = data_dir.join(APP_ID);
             if !app_data_dir.exists() {
                 fs::create_dir_all(&app_data_dir).unwrap();
             }
             let data_file_path = app_data_dir.join("data.toml");
-            let contents = fs::read_to_string(&data_file_path).unwrap();
+            let contents = fs::read_to_string(&data_file_path).unwrap_or_default();
             let app_data = toml::from_str::<Self>(&contents).unwrap();
             app_data
         } else { Self::default() }
@@ -50,7 +50,7 @@ impl AppData {
 
     pub fn save(&self) {
         if let Some(data_dir) = dirs::data_local_dir() {
-            let app_data_dir = data_dir.join("hadron");
+            let app_data_dir = data_dir.join(APP_ID);
             if !app_data_dir.exists() {
                 fs::create_dir_all(&app_data_dir).unwrap();
             }
