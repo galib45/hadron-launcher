@@ -5,10 +5,12 @@
 Quarkpad is a simple, open-source game launcher for Linux, designed to manage and launch games using Valve's Proton compatibility layer. It provides a clean graphical interface built with the `slint` framework to help users organize their game library, add new games, configure basic settings, and launch them with Proton.
 
 ## Screenshots
-![](./screenshots/1.png)
-![](./screenshots/4.png)
-![](./screenshots/2.png)
-![](./screenshots/3.png)
+<div style="display: flex; flex-wrap: wrap; justify-content: center;">
+  <img src="./screenshots/1.png" width="45%">
+  <img src="./screenshots/4.png" width="45%">
+  <img src="./screenshots/2.png" width="45%">
+  <img src="./screenshots/3.png" width="45%">
+</div>
 
 ## Features
 
